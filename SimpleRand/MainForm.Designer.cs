@@ -15,7 +15,6 @@ namespace SimpleRand
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.ListBox categoryListBox;
-		private System.Windows.Forms.Label selectionLabel;
 		private System.Windows.Forms.Button randomizeButton;
 		private System.Windows.Forms.RichTextBox optionsTextInput;
 		private System.Windows.Forms.Button addCategoryButton;
@@ -49,7 +48,6 @@ namespace SimpleRand
 		private void InitializeComponent()
 		{
 			this.categoryListBox = new System.Windows.Forms.ListBox();
-			this.selectionLabel = new System.Windows.Forms.Label();
 			this.randomizeButton = new System.Windows.Forms.Button();
 			this.addCategoryButton = new System.Windows.Forms.Button();
 			this.categoryNameInput = new System.Windows.Forms.TextBox();
@@ -71,17 +69,10 @@ namespace SimpleRand
 			this.categoryListBox.TabIndex = 0;
 			this.categoryListBox.SelectedIndexChanged += new System.EventHandler(this.CategoryListBoxSelectedIndexChanged);
 			// 
-			// selectionLabel
-			// 
-			this.selectionLabel.Location = new System.Drawing.Point(139, 165);
-			this.selectionLabel.Name = "selectionLabel";
-			this.selectionLabel.Size = new System.Drawing.Size(54, 23);
-			this.selectionLabel.TabIndex = 2;
-			this.selectionLabel.Text = "Output";
-			// 
 			// randomizeButton
 			// 
 			this.randomizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.randomizeButton.Enabled = false;
 			this.randomizeButton.Location = new System.Drawing.Point(139, 309);
 			this.randomizeButton.Name = "randomizeButton";
 			this.randomizeButton.Size = new System.Drawing.Size(118, 23);
@@ -110,6 +101,7 @@ namespace SimpleRand
 			// 
 			// changeNameButton
 			// 
+			this.changeNameButton.Enabled = false;
 			this.changeNameButton.Location = new System.Drawing.Point(312, 12);
 			this.changeNameButton.Name = "changeNameButton";
 			this.changeNameButton.Size = new System.Drawing.Size(85, 23);
@@ -120,6 +112,7 @@ namespace SimpleRand
 			// 
 			// deleteCategoryButton
 			// 
+			this.deleteCategoryButton.Enabled = false;
 			this.deleteCategoryButton.Location = new System.Drawing.Point(13, 193);
 			this.deleteCategoryButton.Name = "deleteCategoryButton";
 			this.deleteCategoryButton.Size = new System.Drawing.Size(119, 23);
@@ -177,10 +170,10 @@ namespace SimpleRand
 			this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
 			| System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.outputTextBox.Location = new System.Drawing.Point(140, 195);
+			this.outputTextBox.Location = new System.Drawing.Point(140, 167);
 			this.outputTextBox.Name = "outputTextBox";
 			this.outputTextBox.ReadOnly = true;
-			this.outputTextBox.Size = new System.Drawing.Size(427, 109);
+			this.outputTextBox.Size = new System.Drawing.Size(427, 137);
 			this.outputTextBox.TabIndex = 14;
 			this.outputTextBox.Text = "";
 			// 
@@ -199,7 +192,6 @@ namespace SimpleRand
 			this.Controls.Add(this.categoryNameInput);
 			this.Controls.Add(this.addCategoryButton);
 			this.Controls.Add(this.randomizeButton);
-			this.Controls.Add(this.selectionLabel);
 			this.Controls.Add(this.categoryListBox);
 			this.Name = "MainForm";
 			this.Text = "SimpleRand";

@@ -30,6 +30,9 @@ namespace SimpleRand
 			if (SimpleRand.Instance.categories.Count > 0)
 			{
 				optionsTextInput.Enabled = categoryNameInput.Enabled = true;
+				deleteCategoryButton.Enabled = true;
+				randomizeButton.Enabled = true;
+				changeNameButton.Enabled = true;
 			}
 			
 			//
@@ -65,13 +68,18 @@ namespace SimpleRand
 			optionsTextInput.Enabled = true;
 			//SimpleRand.Instance.SaveData();
 			deleteCategoryButton.Enabled = true;
+			randomizeButton.Enabled = true;
+			changeNameButton.Enabled = true;
 		}
 
 		void RandomizeButtonClick(object sender, EventArgs e)
 		{
-			int choiceIndex = SimpleRand.Instance.srRand.Next(0, SimpleRand.Instance.currentCategory.categoryOptions.Count);
-			string stringChoice = SimpleRand.Instance.currentCategory.categoryOptions[choiceIndex];
-			outputTextBox.Text += stringChoice + Environment.NewLine;
+			if (SimpleRand.Instance.currentCategory != null)
+			{
+				int choiceIndex = SimpleRand.Instance.srRand.Next(0, SimpleRand.Instance.currentCategory.categoryOptions.Count);
+				string stringChoice = SimpleRand.Instance.currentCategory.categoryOptions[choiceIndex];
+				outputTextBox.Text += stringChoice + Environment.NewLine;
+			}
 		}
 		void OptionsTextInputTextChanged(object sender, EventArgs e)
 		{
@@ -86,7 +94,7 @@ namespace SimpleRand
 			int index = categoryListBox.SelectedIndex;
 			if (categoryListBox.SelectedIndex > -1)
 			{
-				selectionLabel.Text = index.ToString();
+
 				SimpleRand.Instance.currentCategory = SimpleRand.Instance.categories[index];
 				optionsTextInput.Text = SimpleRand.Instance.currentCategory.LoadOptionsToString();
 				categoryNameInput.Text = SimpleRand.Instance.currentCategory.categoryName;
@@ -101,8 +109,18 @@ namespace SimpleRand
 		{
 			
 				SimpleRand.Instance.categories.Remove(SimpleRand.Instance.currentCategory);
+				
 				BindCategoryListData();
 				deleteCategoryButton.Enabled = Convert.ToBoolean(SimpleRand.Instance.categories.Count);
+				if (SimpleRand.Instance.categories.Count == 0)
+				{
+					randomizeButton.Enabled = false;
+					changeNameButton.Enabled = false;
+				}
+				else
+				{
+					SimpleRand.Instance.currentCategory = SimpleRand.Instance.categories[0];
+				}
 			
 		}
 		void SaveDataButtonClick(object sender, EventArgs e)
