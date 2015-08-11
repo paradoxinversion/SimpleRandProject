@@ -1,0 +1,6 @@
+D:\CSharp Projects\SimpleRandProject\SimpleRand\bin\Release\SimpleRand.exe.config
+D:\CSharp Projects\SimpleRandProject\SimpleRand\bin\Release\SimpleRand.exe
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Release\SimpleRand.csprojResolveAssemblyReference.cache
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Release\SimpleRand.MainForm.resources
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Release\SimpleRand.csproj.GenerateResource.Cache
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Release\SimpleRand.exe

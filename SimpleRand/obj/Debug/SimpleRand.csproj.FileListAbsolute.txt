@@ -1,0 +1,8 @@
+D:\CSharp Projects\SimpleRandProject\SimpleRand\bin\Debug\SimpleRand.exe.config
+D:\CSharp Projects\SimpleRandProject\SimpleRand\bin\Debug\SimpleRand.exe
+D:\CSharp Projects\SimpleRandProject\SimpleRand\bin\Debug\SimpleRand.pdb
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Debug\SimpleRand.csprojResolveAssemblyReference.cache
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Debug\SimpleRand.MainForm.resources
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Debug\SimpleRand.csproj.GenerateResource.Cache
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Debug\SimpleRand.exe
+D:\CSharp Projects\SimpleRandProject\SimpleRand\obj\Debug\SimpleRand.pdb
